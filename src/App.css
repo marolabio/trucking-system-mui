@@ -10,19 +10,11 @@
 
 body {
   background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
-.container {
-  margin: 30px auto;
-  width: 350px;
-}
 
 h1 {
   letter-spacing: 1px;
@@ -31,8 +23,8 @@ h1 {
 
 h3 {
   border-bottom: 1px solid #bbb;
-  padding-bottom: 10px;
-  margin: 40px 0 10px;
+ padding-bottom: 10px;
+ text-align: center;
 }
 
 h4 {
@@ -54,7 +46,7 @@ h4 {
   text-align: center;
 }
 
-.inc-exp-container > div:first-of-type {
+.inc-exp-container > div:nth-child(1),  .inc-exp-container > div:nth-child(2) {
   border-right: 1px solid #dedede;
 }
 
@@ -72,33 +64,6 @@ h4 {
   color: #c0392b;
 }
 
-label {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-input[type='text'],
-input[type='number'] {
-  border: 1px solid #dedede;
-  border-radius: 2px;
-  display: block;
-  font-size: 16px;
-  padding: 10px;
-  width: 100%;
-}
-
-.btn {
-  cursor: pointer;
-  background-color: #9c88ff;
-  box-shadow: var(--box-shadow);
-  color: #fff;
-  border: 0;
-  display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
-  padding: 10px;
-  width: 100%;
-}
 
 .btn:focus,
 .delete-btn:focus {
