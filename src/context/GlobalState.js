@@ -3,7 +3,16 @@ import AppReducer from './AppReducer';
 
 // Initial state
 const initialState = {
-  transactions: []
+  transactions: [
+    {
+      id: 1,
+      text: 'Boxes',
+      qty: '',
+      unit: '',
+      amount: 0
+    }
+  ],
+  information: {}
 }
 
 // Create context
@@ -28,10 +37,27 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function addExpense(expense) {
+    dispatch({
+      type: 'ADD_EXPENSE',
+      payload: expense
+    });
+  }
+
+  function addInformation(information) {
+    dispatch({
+      type: 'ADD_INFORMATION',
+      payload: information
+    });
+  }
+
   return (<GlobalContext.Provider value={{
     transactions: state.transactions,
+    information: state.information,
     deleteTransaction,
-    addTransaction
+    addTransaction,
+    addExpense,
+    addInformation
   }}>
     {children}
   </GlobalContext.Provider>);
